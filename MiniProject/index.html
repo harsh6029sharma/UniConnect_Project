@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniConnect</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/c741689691.js" crossorigin="anonymous"></script>
+    <style>
+        /* Prevent horizontal scrollbar */
+        body {
+            margin: 0;
+            overflow-x: hidden;
+            background-color: #121212;
+            color: white;
+        }
+
+        .carousel-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 50px 0;
+            overflow: hidden;
+            position: relative;
+            width: 80vw;
+        }
+
+        .carousel-slide {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .glass-card {
+            width: 200px;
+            height: 300px;
+            margin: 0 10px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            flex-shrink: 0;
+        }
+
+        .btn {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 50%;
+            margin: 0 20px;
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+
+        <div class="logo">
+            <img src="images/UniConnect.png" alt="UniConnect Logo">
+        </div>
+
+        <!-- Searchbox -->
+        <div class="search-container">
+            <input class="input-field" type="text" placeholder="Search Communities...">
+            <button class="search-btn" aria-label="Search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+
+        <!-- Login/Signup Buttons -->
+        <div class="nav-btn">
+            <a href="Login.html"><button>Login</button></a>
+            <a href="Login.html"><button>Sign Up</button></a>
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <aside class="sidebar"></aside>
+
+    <!-- Trending Communities Section -->
+    <h2 class="section-title">Trending Communities...</h2>
+
+    <!-- Carousel -->
+    <div class="carousel-container">
+        <button class="btn left" onclick="prevSlide()" aria-label="Previous Slide">&#10094;</button>
+
+        <div class="carousel-slide" id="carouselSlide">
+            <div class="glass-card"></div>
+            <div class="glass-card"></div>
+            <div class="glass-card"></div>
+            <div class="glass-card"></div>
+            <div class="glass-card"></div>
+            <div class="glass-card"></div>
+            <div class="glass-card"></div>
+            <div class="glass-card"></div>
+            <div class="glass-card"></div>
+            <div class="glass-card"></div>
+            <div class="glass-card"></div>
+            <div class="glass-card"></div>
+        </div>
+
+        <button class="btn right" onclick="nextSlide()" aria-label="Next Slide">&#10095;</button>
+    </div>
+
+    <!-- Trending Posts Section -->
+    <h2 class="section-title">Trending Posts...</h2>
+
+    <script>
+        let currentIndex = 0;
+        const slide = document.getElementById('carouselSlide');
+        const cards = document.querySelectorAll('.glass-card');
+        const totalCards = cards.length;
+        const visibleCards = Math.floor(document.querySelector('.carousel-container').offsetWidth / 220);
+
+        function nextSlide() {
+            if (currentIndex < totalCards - visibleCards) {
+                currentIndex++;
+            }
+            updateSlide();
+        }
+
+        function prevSlide() {
+            if (currentIndex > 0) {
+                currentIndex--;
+            }
+            updateSlide();
+        }
+
+        function updateSlide() {
+            slide.style.transform = `translateX(-${currentIndex * 220}px)`;
+        }
+
+        window.addEventListener('resize', () => {
+            updateSlide();
+        });
+    </script>
+</body>
+
+</html>

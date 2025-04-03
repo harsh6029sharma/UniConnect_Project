@@ -1,0 +1,397 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+a{
+    list-style: none;
+}
+.navbar{
+    display: flex;
+    /* background-color: aqua; */
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 13vh;
+    position: fixed;
+    /* border-bottom: 1px solid black; */
+    background-color: #fff;
+    
+}
+
+.logo-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    /* background-color: yellow; */
+}
+
+.logo img{
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+}
+
+.search-container{
+    width: 35%;
+    /* background-color: red; */
+}
+
+.search-container input {
+    padding: 12px 12px;
+    width: 100%;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background-color: #cebfbf;
+}
+
+.nav-links{
+    display: flex;
+    padding: 0 20px;
+    width: 20vw;
+    justify-content: space-between;
+    gap: 20px;
+    /* background-color: rgb(152, 173, 130); */
+}
+
+.signin-btn{
+    color: white;
+    border-radius: 10px;
+    background-color: black;
+    padding: 4px 15px 4px 15px;
+    cursor: pointer;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: black;
+
+}
+
+.nav-links a i{
+    font-size: 30px;
+}
+
+.hero-section{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    /* background-color: wheat; */
+}
+
+
+/* .left-sidebar{
+    padding-top: 2%;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 20%; 
+    background-color: lightgray;
+    height: 87vh;
+    background-color: rgb(231, 219, 219);
+   
+}
+
+
+.left-sidebar a{
+    display: flex;
+    text-align: center;
+    text-decoration: none;
+    margin: 10%;
+    
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+}
+
+.left-sidebar a i{
+    font-size: 27px;
+    margin-right: 20px;
+}
+
+
+.main-content{
+    width: 60%;
+    background-color: aqua;
+} */
+
+
+/* .left-sidebar{
+    padding-top: 80px;
+    width: 20%;
+    background-color: lightgray;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    text-decoration: none;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    
+} */
+.left-sidebar {
+    position: fixed; /* Make the sidebar fixed */
+    top: 80px; /* Adjust to avoid overlapping with the navbar */
+    left: 0; /* Align it to the left */
+    width: 20%; /* Keep the width consistent */
+    background-color: lightgray;
+    height: calc(100vh - 80px); /* Full height minus the navbar height */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    overflow-y: auto; /* Add scrolling if content overflows */
+    border-right: 1px solid #ddd; /* Optional: Add a subtle border */
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+.left-sidebar a{
+    display: flex;
+    text-align: center;
+    text-decoration: none;
+
+    /* margin:5%; */
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    padding: 1em;
+    
+
+}
+
+.left-sidebar a i{
+    font-size: 27px;
+    margin-right: 20px;
+}
+
+
+.main-content{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-evenly;  */
+    align-items: center; 
+    width: 60%; 
+    background-color: #fff; 
+    overflow: auto; 
+} 
+
+
+
+
+.right-sidebar{
+    display: flex;
+    /* flex-direction: column; */
+    width: 20%;
+    background-color: lightgray;
+    overflow: auto;
+    border-radius: 8px;
+}
+
+.upper-main-content{
+    margin: 10px;
+    width:90%;
+    height: 30%;
+    background-color: lightgray;
+}
+
+.lower-main-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:90%;
+    height:100vh;
+    border-radius: 16px;
+    /* background-color: lightgray; */
+}
+
+.post-card{
+    width: 100%;
+    height: 60%;
+    background-color: rgb(241, 237, 237);
+    margin: 2px;
+    border-radius: 16px;
+}
+
+
+.post-card-upper{
+    display: flex;
+    width: 100%;
+    height: 20%;
+    /* background-color: lightblue; */
+}
+
+.post-card-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* top: 10%; */
+    width: 80%;
+    height: 60%;
+    /* background-color: lightgreen; */
+    cursor: pointer;
+}
+
+.post-card-content .content{
+    position: relative;
+    left: 10%;
+    /* bottom: 20%;
+    top: 2%; */
+}
+
+.post-card-lower{
+    position: relative;
+    left: 10%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    width: 50%;
+    height: 20%;
+    /* background-color: lightblue; */
+}
+
+.post-card-lower li{
+    list-style: none;
+}
+
+
+.post-card-lower li button{
+    padding-top: 5px;
+    padding-left: 26px;
+    padding-right: 20px;
+    padding-bottom: 5px;
+    border: none;
+    outline: none;
+    border-radius: 14px;
+    background-color: rgb(172, 165, 165);
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.post-card-lower li button:active{
+    background-color: rgb(117, 59, 172);
+    color: white;
+}
+
+
+
+.community-name{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* flex-direction: column; */
+    height: 100%;
+    width: 50%;
+    /* background-color: yellow; */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    border-radius: 16px;
+}
+
+
+.community-logo{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: red;
+    padding: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+
+.follow-btn-container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    /* background-color: red; */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    /* background-color: blue; */
+    padding-right: 5%;
+    gap: 4%;
+}
+
+.follow-btn{
+    padding: 8px 24px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 800;
+    background-color: rgb(117, 59, 172);
+    border-radius: 18px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.follow-btn:active{
+    background-color: rgb(172, 165, 165);
+    color: white;
+}
+
+.menu-container {
+    position: relative;
+    display: inline-block;
+}
+
+.menu-btn {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.menu {
+    display: flex;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background: white;
+    border: 1px solid #ccc;
+    list-style: none;
+    padding: 5px;
+    display: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 20px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.menu li:hover {
+    background: #f0f0f0;
+}
+
+
+.show-menu {
+    display: block;
+}
+
+.menu i{
+    font-size: 15px;
+    margin-right: 10px;
+}
