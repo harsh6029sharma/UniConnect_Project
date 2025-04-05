@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Community</title>
+    <link rel="stylesheet" href="css/CreateCommunity.css">
+</head>
+<body>
+    <div class="community-page">
+        <h1>Create a Community</h1>
+
+        A name and description help people understand what your community is all about.
+
+        <form action="submit_community.php" method="POST">
+            <!-- communtiy name  -->
+            <label for="community-name">Community Name:</label>
+            <input type="text" id="community-name" name="community_name" required>
+
+
+            <!-- community description -->
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" required></textarea>
+
+            <!-- community image -->
+            <label for="category">Category:</label>
+            <select id="category" name="category">
+                <option value="technology">Technology</option>
+                <option value="sports">Sports</option>
+                <option value="music">Music</option>
+                <option value="art">Art</option>
+            </select>
+
+            <button type="submit">Create Community</button>
+        </form>
+    </div>
+</body>
+</html>

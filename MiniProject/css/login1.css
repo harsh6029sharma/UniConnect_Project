@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "calibri";
+    color: black; /* Ensure all text is black */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: #f2f2f2;
+    color: black; /* Ensure body text is black */
+    background-size: cover;
+    background-position: center;
+}
+
+.wrapper {
+    width: 420px;
+    background: transparent;
+    border: 2px solid rgba(0, 0, 0, 0.2); /* Black border */
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: black; /* Ensure wrapper text is black */
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+
+.wrapper h1 {
+    font-size: 36px;
+    text-align: center;
+    color: black; /* Ensure heading text is black */
+}
+
+.wrapper .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-box input {
+    color: black; /* Input text color */
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 2px solid black; /* Black border */
+    outline: none;
+    border-radius: 40px;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder {
+    color: black; /* Placeholder text color */
+}
+
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: black; /* Icon color */
+}
+
+.wrapper .remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+    color: black; /* Ensure text is black */
+}
+
+.remember-forgot label input {
+    accent-color: black; /* Checkbox color */
+    margin-right: 3px;
+    cursor: pointer;
+}
+
+.remember-forgot a {
+    color: black; /* Link color */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.remember-forgot:hover {
+    text-decoration: none;
+}
+
+.wrapper .btn {
+    width: 100%;
+    height: 45px;
+    background-color: black; /* Button background color */
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-size: 16px;
+    color: white; /* Button text color */
+    font-weight: 600;
+}
+
+.wrapper .register-link {
+    font-size: 14.5px;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    color: black; /* Ensure text is black */
+}
+
+.register-link p a {
+    color: black; /* Link color */
+    text-decoration: none;
+    font-weight: 600;
+    padding-left: 4px;
+}
+
+.register-link p a:hover {
+    text-decoration: underline;
+}
